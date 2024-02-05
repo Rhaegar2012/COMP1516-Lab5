@@ -32,7 +32,7 @@ def get_name_of_longest_country():
     number_of_countries = len(countries)
     index = 0
     max_name_length = 0
-    while index<number_of_countries:
+    while index < number_of_countries:
         country_name_length = len(countries[index])
         if country_name_length > max_name_length:
             max_name_length = country_name_length
