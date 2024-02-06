@@ -1,4 +1,4 @@
-# Author: Jose Tellez
+# Author: Jose Tellez and Alex Kweung and Yu-shiuan Lin
 import data
 
 countries_and_capitals = data.countries_and_capitals
