@@ -11,7 +11,24 @@ def main():
     Main function , runs program
     :return:
     """
-    pass
+    # Returns the total number of countries in the tuple
+    print(how_many_countries())
+    # Returns the country with the longest name
+    print(get_name_of_longest_country())
+    # Returns the number of captials containing the letter e
+    print(get_number_of_capitals_containing('e'))
+    # Returns number of capitals contianing the letter z
+    print(get_number_of_capitals_containing('z'))
+    # Returns number of capitals containing an apostrophe symbol (')
+    print(get_number_of_capitals_containing("an"))
+    # Returns a list of countries and capitals that start with the same letter
+    print(get_capitals_and_countries_that_begin_and_end_with_same_letter())
+    # Returns the capital of a given country- case insensitive
+    print(get_capital_of("Canada"))
+    # Returns the capital of a given country- case insensitive
+    print(get_capital_of("nEW zeALAND"))
+    # Returns a list of countries with a given number of letters in the name
+    print(get_list_of_countries_with_this_many_letters_in_name(11))
 
 
 def how_many_countries():
