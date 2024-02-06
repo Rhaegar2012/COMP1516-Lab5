@@ -149,11 +149,25 @@ def how_many_countries():
     """
     #
     # count how many countries:
-    # 1. return the length of countries tuple
+    # 1. check if the length of countries tuple is not 0
+    # 2. if #1 is true, assign the length of countries tuple
+    # 3. if #1 is false, print length of countries tuple cannot be 0
     #
 
+    # assign None as a placeholder value to number_of_countries
+    number_of_countries = None
+
+    # if length of countries is not 0
+    if len(countries) != 0:
+        # assign length of countries tuple
+        number_of_countries = len(countries)
+    # otherwise, if the above conditions are not satisfied
+    else:
+        # print length of countries tuple cannot be 0
+        print("length of countries tuple cannot be 0")
+
     # return the number of countries
-    return len(countries)
+    return number_of_countries
 
 
 def get_name_of_longest_country():
@@ -167,13 +181,53 @@ def get_name_of_longest_country():
     """
     #
     # get name of longest country:
-    # 1. return the name of the longest country using max()
-    # 2. pass in countries tuple and set key argument to length so max() compares each item in countries by length
-    # instead of the default
+    # 1. iterate over countries tuple
+    # 2. check if length of current country is greater than 0
+    # 3. check if length of current country is greater than longest country size
+    # 4. if #2 is true and index is 0, then assign the current country name and its length
+    # 5. if #2 is false and index is 0, then assign 0
+    # 6. if #3 is true and index is not 0, then assign the current country name and its length
     #
 
+    # assign None as placeholder value for name_of_longest_country
+    name_of_longest_country = None
+
+    # assign None as placeholder value for longest_country_size
+    longest_country_size = None
+
+    # index variable for while loop
+    i = 0
+
+    # while loop with condition i < len(countries)
+    while i < len(countries):
+        # if index is 0 and length of current country is greater than 0
+        if i == 0 and len(countries[i]) > 0:
+            # assign length of current country to longest_country_size
+            longest_country_size = len(countries[i])
+
+            # assign current country name
+            name_of_longest_country = countries[i]
+        # if index is 0 and length of current country is not greater than 0
+        elif i == 0 and not len(countries[i]) > 0:
+            # assign 0 to longest_country_size
+            longest_country_size = 0
+        # if index is not 0 and length of current country is greater than longest country size
+        elif i != 0 and len(countries[i]) > longest_country_size:
+            # assign the length of the current country
+            longest_country_size = len(countries[i])
+
+            # assign the current country name
+            name_of_longest_country = countries[i]
+        # otherwise, if the above conditions are not satisfied
+        else:
+            # print length of country is smaller than longest country
+            print("length of country is smaller than longest country")
+
+        # increment index by 1
+        i += 1
+
     # return the name of the longest country
-    return max(countries, key=len)
+    return name_of_longest_country
 
 
 def get_number_of_capitals_containing(substring):
