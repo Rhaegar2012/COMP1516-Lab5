@@ -150,24 +150,18 @@ def how_many_countries():
     #
     # count how many countries:
     # 1. check if the length of countries tuple is not 0
-    # 2. if #1 is true, assign the length of countries tuple
+    # 2. if #1 is true, return the length of countries tuple
     # 3. if #1 is false, print length of countries tuple cannot be 0
     #
 
-    # assign None as a placeholder value to number_of_countries
-    number_of_countries = None
-
     # if length of countries is not 0
     if len(countries) != 0:
-        # assign length of countries tuple
-        number_of_countries = len(countries)
+        # return the length of countries tuple
+        return len(countries)
     # otherwise, if the above conditions are not satisfied
     else:
         # print length of countries tuple cannot be 0
         print("length of countries tuple cannot be 0")
-
-    # return the number of countries
-    return number_of_countries
 
 
 def get_name_of_longest_country():
