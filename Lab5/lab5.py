@@ -12,23 +12,32 @@ def main():
     :return:
     """
     # Returns the total number of countries in the tuple
-    print(how_many_countries())
+    number_of_countries = how_many_countries()
+    print(number_of_countries)
     # Returns the country with the longest name
-    print(get_name_of_longest_country())
-    # Returns the number of captials containing the letter e
-    print(get_number_of_capitals_containing('e'))
-    # Returns number of capitals contianing the letter z
-    print(get_number_of_capitals_containing('z'))
+    longest_country_name = get_name_of_longest_country()
+    print(longest_country_name)
+    # Returns the number of capitals containing the letter e
+    number_of_capitals = get_number_of_capitals_containing('e')
+    print(number_of_capitals)
+    # Returns number of capitals containing the letter z
+    number_of_capitals = get_number_of_capitals_containing("z")
+    print(number_of_capitals)
     # Returns number of capitals containing an apostrophe symbol (')
-    print(get_number_of_capitals_containing("an"))
+    number_of_capitals = get_number_of_capitals_containing("an")
+    print(number_of_capitals)
     # Returns a list of countries and capitals that start with the same letter
-    print(get_capitals_and_countries_that_begin_and_end_with_same_letter())
+    capitals_and_countries_with_same_letter = get_capitals_and_countries_that_begin_and_end_with_same_letter()
+    print(capitals_and_countries_with_same_letter)
     # Returns the capital of a given country- case insensitive
-    print(get_capital_of("Canada"))
+    capital = get_capital_of("Canada")
+    print(capital)
     # Returns the capital of a given country- case insensitive
-    print(get_capital_of("nEW zeALAND"))
+    capital = get_capital_of("nEW Zealand")
+    print(capital)
     # Returns a list of countries with a given number of letters in the name
-    print(get_list_of_countries_with_this_many_letters_in_name(11))
+    countries_with_number_of_letters = get_list_of_countries_with_this_many_letters_in_name(11)
+    print(countries_with_number_of_letters)
 
 
 def how_many_countries():
@@ -85,8 +94,8 @@ def get_capital_of(country):
     number_of_countries_and_capitals = len(countries_and_capitals)
     index = 0
     while index < number_of_countries_and_capitals:
-        country_to_evaluate = countries_and_capitals[index][0]
-        if country_to_evaluate == country :
+        country_to_evaluate = countries_and_capitals[index][0].lower().capitalize()
+        if country_to_evaluate == country:
             return countries_and_capitals[index][1]
         index += 1
     return None
@@ -119,10 +128,11 @@ def get_capitals_and_countries_that_begin_and_end_with_same_letter():
     number_of_country_capital_pairs = len(countries_and_capitals)
     capitals_countries_with_same_letter = []
     while index < number_of_country_capital_pairs:
-        country = countries_and_capitals[index][0].lower()
-        capital = countries_and_capitals[index][1].lower()
-        if country == capital:
-            capitals_countries_with_same_letter.append(country)
+        country_letter = countries_and_capitals[index][0][0].lower()
+        capital_letter = countries_and_capitals[index][1][0].lower()
+        if country_letter == capital_letter:
+            capitals_countries_with_same_letter.append(countries_and_capitals[index][0]+"-"
+                                                       + countries_and_capitals[index][1])
         index += 1
     return capitals_countries_with_same_letter
 
@@ -136,5 +146,5 @@ def print_countries_in_reverse_alphabetical_order():
     return reverse_list
 
 
-if __name__ == "main":
+if __name__ == "__main__":
     main()
