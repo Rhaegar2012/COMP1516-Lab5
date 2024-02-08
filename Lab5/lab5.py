@@ -109,6 +109,7 @@ def get_list_of_countries_with_this_many_letters_in_name(num_letters):
     return countries_with_same_number_of_letters
 
 
+# I stock at this function
 def get_capitals_and_countries_that_begin_and_end_with_same_letter():
     """
     Determines if a country and its capital start with the same letter and adds them to a list
@@ -117,7 +118,7 @@ def get_capitals_and_countries_that_begin_and_end_with_same_letter():
     """
     index = 0
     number_of_country_capital_pairs = len(countries_and_capitals)
-    capitals_countries_with_same_letter = []
+    capitals_countries_with_same_letter = []  # why you wrote this?
     while index < number_of_country_capital_pairs:
         country = countries_and_capitals[index][0].lower()
         capital = countries_and_capitals[index][1].lower()
