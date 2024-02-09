@@ -6,40 +6,6 @@ countries = data.countries
 capitals = data.capitals
 
 
-def main():
-    """
-    Main function , runs program
-    :return:
-    """
-    # Returns the total number of countries in the tuple
-    number_of_countries = how_many_countries()
-    print(number_of_countries)
-    # Returns the country with the longest name
-    longest_country_name = get_name_of_longest_country()
-    print(longest_country_name)
-    # Returns the number of capitals containing the letter e
-    number_of_capitals = get_number_of_capitals_containing('e')
-    print(number_of_capitals)
-    # Returns number of capitals containing the letter z
-    number_of_capitals = get_number_of_capitals_containing("z")
-    print(number_of_capitals)
-    # Returns number of capitals containing an apostrophe symbol (')
-    number_of_capitals = get_number_of_capitals_containing("an")
-    print(number_of_capitals)
-    # Returns a list of countries and capitals that start with the same letter
-    capitals_and_countries_with_same_letter = get_capitals_and_countries_that_begin_and_end_with_same_letter()
-    print(capitals_and_countries_with_same_letter)
-    # Returns the capital of a given country- case insensitive
-    capital = get_capital_of("Canada")
-    print(capital)
-    # Returns the capital of a given country- case insensitive
-    capital = get_capital_of("nEW Zealand")
-    print(capital)
-    # Returns a list of countries with a given number of letters in the name
-    countries_with_number_of_letters = get_list_of_countries_with_this_many_letters_in_name(11)
-    print(countries_with_number_of_letters)
-
-
 def how_many_countries():
     """
     Determines how many elements exist in the countries tuple
@@ -144,6 +110,40 @@ def print_countries_in_reverse_alphabetical_order():
     """
     reverse_list = countries.reverse()
     return reverse_list
+
+
+def main():
+    """
+    Main function , runs program
+    :return:
+    """
+    # Returns the total number of countries in the tuple
+    number_of_countries = how_many_countries()
+    print(number_of_countries)
+    # Returns the country with the longest name
+    longest_country_name = get_name_of_longest_country()
+    print(longest_country_name)
+    # Returns the number of capitals containing the letter e
+    number_of_capitals = get_number_of_capitals_containing('e')
+    print(number_of_capitals)
+    # Returns number of capitals containing the letter z
+    number_of_capitals = get_number_of_capitals_containing("z")
+    print(number_of_capitals)
+    # Returns number of capitals containing an apostrophe symbol (')
+    number_of_capitals = get_number_of_capitals_containing("an")
+    print(number_of_capitals)
+    # Returns a list of countries and capitals that start with the same letter
+    capitals_and_countries_with_same_letter = get_capitals_and_countries_that_begin_and_end_with_same_letter()
+    print(capitals_and_countries_with_same_letter)
+    # Returns the capital of a given country- case insensitive
+    capital = get_capital_of("Canada")
+    print(capital)
+    # Returns the capital of a given country- case insensitive
+    capital = get_capital_of("nEW Zealand")
+    print(capital)
+    # Returns a list of countries with a given number of letters in the name
+    countries_with_number_of_letters = get_list_of_countries_with_this_many_letters_in_name(11)
+    print(countries_with_number_of_letters)
 
 
 if __name__ == "__main__":
